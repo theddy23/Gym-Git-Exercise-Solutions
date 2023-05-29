@@ -131,3 +131,126 @@ $ git branch -d test
 Deleted branch test (was df0b01d).
 ...
   
+### Bundle 2
+THEDDY@DESKTOP-QE5FBN1 MINGW64 ~/GymExercise (dev)
+$ ls
+Index.html  README.md  home.html
+
+THEDDY@DESKTOP-QE5FBN1 MINGW64 ~/GymExercise (dev)
+$ git stash push -m "Stash Saving the Home Page" home.html
+error: pathspec ':(,prefix:0)home.html' did not match any file(s) known to git
+Did you forget to 'git add'?
+
+THEDDY@DESKTOP-QE5FBN1 MINGW64 ~/GymExercise (dev)
+$ git add home.html
+
+THEDDY@DESKTOP-QE5FBN1 MINGW64 ~/GymExercise (dev)
+$ git stash push -m "Stash Saving the Home Page" home.html
+Saved working directory and index state On dev: Stash Saving the Home Page
+
+THEDDY@DESKTOP-QE5FBN1 MINGW64 ~/GymExercise (dev)
+$ git add about.html
+
+THEDDY@DESKTOP-QE5FBN1 MINGW64 ~/GymExercise (dev)
+$ git stash push -m "Stash Saving the About Page" about.html
+Saved working directory and index state On dev: Stash Saving the About Page
+
+THEDDY@DESKTOP-QE5FBN1 MINGW64 ~/GymExercise (dev)
+$ git add team.html
+
+THEDDY@DESKTOP-QE5FBN1 MINGW64 ~/GymExercise (dev)
+$ git stash push -m "Stash Saving the Team Page" team.html
+Saved working directory and index state On dev: Stash Saving the Team Page
+
+THEDDY@DESKTOP-QE5FBN1 MINGW64 ~/GymExercise (dev)
+$ git stash list
+stash@{0}: On dev: Stash Saving the Team Page
+stash@{1}: On dev: Stash Saving the About Page
+stash@{2}: On dev: Stash Saving the Home Page
+
+THEDDY@DESKTOP-QE5FBN1 MINGW64 ~/GymExercise (dev)
+$ git stash pop stash@{1}
+On branch dev
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   about.html
+
+Dropped stash@{1} (214c2c2d6a43fdf42b43e27b8588d1b1c76e5826)
+
+THEDDY@DESKTOP-QE5FBN1 MINGW64 ~/GymExercise (dev)
+$ git stash list
+stash@{0}: On dev: Stash Saving the Team Page
+stash@{1}: On dev: Stash Saving the Home Page
+
+THEDDY@DESKTOP-QE5FBN1 MINGW64 ~/GymExercise (dev)
+$ git stash pop stash@{1}
+On branch dev
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   about.html
+        new file:   home.html
+
+Dropped stash@{1} (d454a72f45b4dfdc3074d6e732a358ec077b885b)
+
+THEDDY@DESKTOP-QE5FBN1 MINGW64 ~/GymExercise (dev)
+$ git status
+On branch dev
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   about.html
+        new file:   home.html
+
+
+THEDDY@DESKTOP-QE5FBN1 MINGW64 ~/GymExercise (dev)
+$ git commit -m "Firt Commit After Stash Saving"
+[dev bd75e8a] Firt Commit After Stash Saving
+ 2 files changed, 24 insertions(+)
+ create mode 100644 about.html
+ create mode 100644 home.html
+
+THEDDY@DESKTOP-QE5FBN1 MINGW64 ~/GymExercise (dev)
+$ git push -u origin dev
+Enumerating objects: 10, done.
+Counting objects: 100% (10/10), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (8/8), done.
+Writing objects: 100% (10/10), 1.47 KiB | 501.00 KiB/s, done.
+Total 10 (delta 3), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (3/3), done.
+remote:
+remote: Create a pull request for 'dev' on GitHub by visiting:
+remote:      https://github.com/theddy23/Gym-Git-Exercise-Solutions/pull/new/dev
+remote:
+To https://github.com/theddy23/Gym-Git-Exercise-Solutions.git
+ * [new branch]      dev -> dev
+branch 'dev' set up to track 'origin/dev'.
+
+THEDDY@DESKTOP-QE5FBN1 MINGW64 ~/GymExercise (dev)
+$ git stash list
+stash@{0}: On dev: Stash Saving the Team Page
+
+THEDDY@DESKTOP-QE5FBN1 MINGW64 ~/GymExercise (dev)
+$ git stash pop stash@{0}
+On branch dev
+Your branch is up to date with 'origin/dev'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   team.html
+
+Dropped stash@{0} (921f4c6b1882601a7ec948172d35237a30c3ccff)
+
+THEDDY@DESKTOP-QE5FBN1 MINGW64 ~/GymExercise (dev)
+$ git reset --hard
+HEAD is now at bd75e8a Firt Commit After Stash Saving
+
+THEDDY@DESKTOP-QE5FBN1 MINGW64 ~/GymExercise (dev)
+$ git status
+On branch dev
+Your branch is up to date with 'origin/dev'.
+
+nothing to commit, working tree clean
+...
+  
+  
+  
