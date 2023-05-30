@@ -1,6 +1,6 @@
 # Gym-Git-Exercise-Solutions
-## Exercise 1
-### Bundle 1
+## Bundle 1
+### Exercise 1
 ...
 
 THEDDY@DESKTOP-QE5FBN1 MINGW64 ~
@@ -131,7 +131,7 @@ $ git branch -d test
 Deleted branch test (was df0b01d).
 ...
   
-### Bundle 2
+### Exercise 2
 THEDDY@DESKTOP-QE5FBN1 MINGW64 ~/GymExercise (dev)
 $ ls
 Index.html  README.md  home.html
