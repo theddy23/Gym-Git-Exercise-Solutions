@@ -251,6 +251,51 @@ Your branch is up to date with 'origin/dev'.
 
 nothing to commit, working tree clean
 ...
+## Bundle 2
+  ### Exercise 1
+...
+  THEDDY@DESKTOP-QE5FBN1 MINGW64 ~/GymExercise (dev)
+$ git branch ft/bundle-2
+
+THEDDY@DESKTOP-QE5FBN1 MINGW64 ~/GymExercise (dev)
+$ git checkout ft/bundle-2
+Switched to branch 'ft/bundle-2'
+
+THEDDY@DESKTOP-QE5FBN1 MINGW64 ~/GymExercise (ft/bundle-2)
+$ git add services.html
+
+THEDDY@DESKTOP-QE5FBN1 MINGW64 ~/GymExercise (ft/bundle-2)
+$ git status
+On branch ft/bundle-2
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   services.html
+
+
+THEDDY@DESKTOP-QE5FBN1 MINGW64 ~/GymExercise (ft/bundle-2)
+$ git commit -m "Committing service page in branch three"
+[ft/bundle-2 290b6ae] Committing service page in branch three
+ 1 file changed, 12 insertions(+)
+ create mode 100644 services.html
+
+THEDDY@DESKTOP-QE5FBN1 MINGW64 ~/GymExercise (ft/bundle-2)
+$ git push -u origin ft/bundle-2
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 494 bytes | 247.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/bundle-2' on GitHub by visiting:
+remote:      https://github.com/theddy23/Gym-Git-Exercise-Solutions/pull/new/ft/bundle-2
+remote:
+To https://github.com/theddy23/Gym-Git-Exercise-Solutions.git
+ * [new branch]      ft/bundle-2 -> ft/bundle-2
+branch 'ft/bundle-2' set up to track 'origin/ft/bundle-2'.
+...
+
   
   
   
