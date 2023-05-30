@@ -295,6 +295,82 @@ To https://github.com/theddy23/Gym-Git-Exercise-Solutions.git
  * [new branch]      ft/bundle-2 -> ft/bundle-2
 branch 'ft/bundle-2' set up to track 'origin/ft/bundle-2'.
 ...
+  
+### Exercise 2
+...
+  THEDDY@DESKTOP-QE5FBN1 MINGW64 ~
+$ cd "C:\Users\THEDDY\GymExercise"
+
+THEDDY@DESKTOP-QE5FBN1 MINGW64 ~/GymExercise (ft/service-redesign|MERGING)
+$ git merge --abort
+
+THEDDY@DESKTOP-QE5FBN1 MINGW64 ~/GymExercise (ft/service-redesign)
+$ git status
+On branch ft/service-redesign
+Your branch is up to date with 'origin/ft/service-redesign'.
+
+nothing to commit, working tree clean
+
+THEDDY@DESKTOP-QE5FBN1 MINGW64 ~/GymExercise (ft/service-redesign)
+$ checkout main
+bash: checkout: command not found
+
+THEDDY@DESKTOP-QE5FBN1 MINGW64 ~/GymExercise (ft/service-redesign)
+$ git checkout main
+Switched to branch 'main'
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+THEDDY@DESKTOP-QE5FBN1 MINGW64 ~/GymExercise (main)
+$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+THEDDY@DESKTOP-QE5FBN1 MINGW64 ~/GymExercise (main)
+$ git diff main..ft/service-redesign
+diff --git a/services.html b/services.html
+index 16479fa..9da2ca8 100644
+--- a/services.html
++++ b/services.html
+@@ -8,6 +8,6 @@
+ </head>
+ <body>
+     <h1> Our Services</h1>
+-    <p> We Bake Delicious Cakes For All Ocassions</p>
++    <p> We Bake Delicious Cakes.</p>
+ </body>
+ </html>
+\ No newline at end of file
+
+THEDDY@DESKTOP-QE5FBN1 MINGW64 ~/GymExercise (main)
+$ git checkout ft/service-redesign
+Switched to branch 'ft/service-redesign'
+Your branch is up to date with 'origin/ft/service-redesign'.
+
+THEDDY@DESKTOP-QE5FBN1 MINGW64 ~/GymExercise (ft/service-redesign)
+$ git merge
+Already up to date.
+
+THEDDY@DESKTOP-QE5FBN1 MINGW64 ~/GymExercise (ft/service-redesign)
+$ git diff ft/service-redesign..main service.html
+fatal: ambiguous argument 'service.html': unknown revision or path not in the working tree.
+Use '--' to separate paths from revisions, like this:
+'git <command> [<revision>...] -- [<file>...]'
+
+THEDDY@DESKTOP-QE5FBN1 MINGW64 ~/GymExercise (ft/service-redesign)
+$ git status
+On branch ft/service-redesign
+Your branch is up to date with 'origin/ft/service-redesign'.
+
+nothing to commit, working tree clean
+
+THEDDY@DESKTOP-QE5FBN1 MINGW64 ~/GymExercise (ft/service-redesign)
+$ git push
+Everything up-to-date
+...
 
   
   
