@@ -649,6 +649,126 @@ THEDDY@DESKTOP-QE5FBN1 MINGW64 ~/GymExercise (ft/faq-page)
 $ git push
 Everything up-to-date
 ...
+  
+ ### Exercise 2
+  ...
+  THEDDY@DESKTOP-QE5FBN1 MINGW64 ~/GymExercise (ft/faq-page)
+$ git branch ft/home-page-redesign
+
+THEDDY@DESKTOP-QE5FBN1 MINGW64 ~/GymExercise (ft/faq-page)
+$ git checkout main
+Switched to branch 'main'
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+THEDDY@DESKTOP-QE5FBN1 MINGW64 ~/GymExercise (main)
+$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   home.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+THEDDY@DESKTOP-QE5FBN1 MINGW64 ~/GymExercise (main)
+$ git add home.html
+
+THEDDY@DESKTOP-QE5FBN1 MINGW64 ~/GymExercise (main)
+$ git commit -m "commiting changes in the main branch"
+[main 9fa3ae3] commiting changes in the main branch
+ 1 file changed, 1 insertion(+)
+
+THEDDY@DESKTOP-QE5FBN1 MINGW64 ~/GymExercise (main)
+$ git push
+To https://github.com/theddy23/Gym-Git-Exercise-Solutions.git
+ ! [rejected]        main -> main (fetch first)
+error: failed to push some refs to 'https://github.com/theddy23/Gym-Git-Exercise-Solutions.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+THEDDY@DESKTOP-QE5FBN1 MINGW64 ~/GymExercise (main)
+$ git pull --rebase
+remote: Enumerating objects: 13, done.
+remote: Counting objects: 100% (12/12), done.
+remote: Compressing objects: 100% (9/9), done.
+remote: Total 9 (delta 3), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (9/9), 6.94 KiB | 112.00 KiB/s, done.
+From https://github.com/theddy23/Gym-Git-Exercise-Solutions
+   64135be..bf05a5a  main       -> origin/main
+ * [new branch]      revert-2-ft/service-redesign -> origin/revert-2-ft/service-redesign
+Successfully rebased and updated refs/heads/main.
+
+THEDDY@DESKTOP-QE5FBN1 MINGW64 ~/GymExercise (main)
+$ git push
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 739 bytes | 739.00 KiB/s, done.
+Total 6 (delta 4), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (4/4), completed with 3 local objects.
+To https://github.com/theddy23/Gym-Git-Exercise-Solutions.git
+   bf05a5a..3dfb3e6  main -> main
+
+THEDDY@DESKTOP-QE5FBN1 MINGW64 ~/GymExercise (main)
+$ git checkout ft/home-page-redesign
+Switched to branch 'ft/home-page-redesign'
+
+THEDDY@DESKTOP-QE5FBN1 MINGW64 ~/GymExercise (ft/home-page-redesign)
+$ git rebase main
+warning: skipped previously applied commit f9a2fb0
+hint: use --reapply-cherry-picks to include skipped commits
+hint: Disable this message with "git config advice.skippedCherryPicks false"
+Successfully rebased and updated refs/heads/ft/home-page-redesign.
+
+THEDDY@DESKTOP-QE5FBN1 MINGW64 ~/GymExercise (ft/home-page-redesign)
+$ git status
+On branch ft/home-page-redesign
+nothing to commit, working tree clean
+
+THEDDY@DESKTOP-QE5FBN1 MINGW64 ~/GymExercise (ft/home-page-redesign)
+$ git status
+On branch ft/home-page-redesign
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   home.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+THEDDY@DESKTOP-QE5FBN1 MINGW64 ~/GymExercise (ft/home-page-redesign)
+$ git add home.html
+
+THEDDY@DESKTOP-QE5FBN1 MINGW64 ~/GymExercise (ft/home-page-redesign)
+$ git commit -m "commiting changes of the home page again"
+[ft/home-page-redesign 6e77daf] commiting changes of the home page again
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+THEDDY@DESKTOP-QE5FBN1 MINGW64 ~/GymExercise (ft/home-page-redesign)
+$ git push -u origin ft/home-page-redesign
+Enumerating objects: 14, done.
+Counting objects: 100% (14/14), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (12/12), done.
+Writing objects: 100% (12/12), 1.39 KiB | 709.00 KiB/s, done.
+Total 12 (delta 6), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (6/6), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/home-page-redesign' on GitHub by visiting:
+remote:      https://github.com/theddy23/Gym-Git-Exercise-Solutions/pull/new/ft/home-page-redesign
+remote:
+To https://github.com/theddy23/Gym-Git-Exercise-Solutions.git
+ * [new branch]      ft/home-page-redesign -> ft/home-page-redesign
+branch 'ft/home-page-redesign' set up to track 'origin/ft/home-page-redesign'.
+...
+  
 
   
   
