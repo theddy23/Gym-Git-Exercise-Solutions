@@ -769,6 +769,100 @@ To https://github.com/theddy23/Gym-Git-Exercise-Solutions.git
 branch 'ft/home-page-redesign' set up to track 'origin/ft/home-page-redesign'.
 ...
   
+ ## Bundle 4
+ ### Exercise 1
+ ...
+  
+THEDDY@DESKTOP-QE5FBN1 MINGW64 ~
+$ cd "C:\Users\THEDDY\GymExercise"
+
+THEDDY@DESKTOP-QE5FBN1 MINGW64 ~/GymExercise (ft/home-page-redesign)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+THEDDY@DESKTOP-QE5FBN1 MINGW64 ~/GymExercise (main)
+$ git remote add git-copy https://github.com/theddy23/git-exercise-clone.git
+
+THEDDY@DESKTOP-QE5FBN1 MINGW64 ~/GymExercise (main)
+$ git remote
+git-copy
+origin
+
+THEDDY@DESKTOP-QE5FBN1 MINGW64 ~/GymExercise (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   home.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+THEDDY@DESKTOP-QE5FBN1 MINGW64 ~/GymExercise (main)
+$ git add home.html
+
+THEDDY@DESKTOP-QE5FBN1 MINGW64 ~/GymExercise (main)
+$ git commit -m "Commiting after creating a new repository"
+[main 0810a63] Commiting after creating a new repository
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+THEDDY@DESKTOP-QE5FBN1 MINGW64 ~/GymExercise (main)
+$ git push origin
+To https://github.com/theddy23/Gym-Git-Exercise-Solutions.git
+ ! [rejected]        main -> main (fetch first)
+error: failed to push some refs to 'https://github.com/theddy23/Gym-Git-Exercise-Solutions.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+THEDDY@DESKTOP-QE5FBN1 MINGW64 ~/GymExercise (main)
+$ git pull --rebase origin main
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), 1.57 KiB | 30.00 KiB/s, done.
+From https://github.com/theddy23/Gym-Git-Exercise-Solutions
+ * branch            main       -> FETCH_HEAD
+   3dfb3e6..2d477c8  main       -> origin/main
+Successfully rebased and updated refs/heads/main.
+
+THEDDY@DESKTOP-QE5FBN1 MINGW64 ~/GymExercise (main)
+$ git push -u origin main
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 324 bytes | 324.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/theddy23/Gym-Git-Exercise-Solutions.git
+   2d477c8..4400a62  main -> main
+branch 'main' set up to track 'origin/main'.
+
+THEDDY@DESKTOP-QE5FBN1 MINGW64 ~/GymExercise (main)
+$ git push git-copy
+Enumerating objects: 51, done.
+Counting objects: 100% (51/51), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (49/49), done.
+Writing objects: 100% (51/51), 14.23 KiB | 971.00 KiB/s, done.
+Total 51 (delta 23), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (23/23), done.
+To https://github.com/theddy23/git-exercise-clone.git
+ * [new branch]      main -> main
+
+THEDDY@DESKTOP-QE5FBN1 MINGW64 ~/GymExercise (main)
+$ git push
+Everything up-to-date
+...
+  
+  
 
   
   
