@@ -861,7 +861,111 @@ THEDDY@DESKTOP-QE5FBN1 MINGW64 ~/GymExercise (main)
 $ git push
 Everything up-to-date
 ...
-  
+ ### Exercise 2
+  ...
+  THEDDY@DESKTOP-QE5FBN1 MINGW64 ~/GymExercise (main)
+$ git branch ft/footer
+
+THEDDY@DESKTOP-QE5FBN1 MINGW64 ~/GymExercise (main)
+$ git checkout ft/footer
+Switched to branch 'ft/footer'
+
+THEDDY@DESKTOP-QE5FBN1 MINGW64 ~/GymExercise (ft/footer)
+$ git add footer.html
+
+THEDDY@DESKTOP-QE5FBN1 MINGW64 ~/GymExercise (ft/footer)
+$ git commit -m "Commiting the footer"
+[ft/footer f20b2ad] Commiting the footer
+ 1 file changed, 12 insertions(+)
+ create mode 100644 footer.html
+
+THEDDY@DESKTOP-QE5FBN1 MINGW64 ~/GymExercise (ft/footer)
+$ git status
+On branch ft/footer
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   footer.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+THEDDY@DESKTOP-QE5FBN1 MINGW64 ~/GymExercise (ft/footer)
+$ git add footer.html
+
+THEDDY@DESKTOP-QE5FBN1 MINGW64 ~/GymExercise (ft/footer)
+$ git commit -m "Commiting the footer after making changes"
+[ft/footer 6d32fb9] Commiting the footer after making changes
+ 1 file changed, 1 insertion(+)
+
+THEDDY@DESKTOP-QE5FBN1 MINGW64 ~/GymExercise (ft/footer)
+$ git push -u origin ft/footer
+Enumerating objects: 15, done.
+Counting objects: 100% (15/15), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (12/12), done.
+Writing objects: 100% (12/12), 2.65 KiB | 679.00 KiB/s, done.
+Total 12 (delta 6), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (6/6), completed with 2 local objects.
+remote:
+remote: Create a pull request for 'ft/footer' on GitHub by visiting:
+remote:      https://github.com/theddy23/Gym-Git-Exercise-Solutions/pull/new/ft/footer
+remote:
+To https://github.com/theddy23/Gym-Git-Exercise-Solutions.git
+ * [new branch]      ft/footer -> ft/footer
+branch 'ft/footer' set up to track 'origin/ft/footer'.
+
+THEDDY@DESKTOP-QE5FBN1 MINGW64 ~/GymExercise (ft/footer)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+THEDDY@DESKTOP-QE5FBN1 MINGW64 ~/GymExercise (main)
+$ git branch ft/squashing
+
+THEDDY@DESKTOP-QE5FBN1 MINGW64 ~/GymExercise (main)
+$ git checkout ft/squashing
+Switched to branch 'ft/squashing'
+
+THEDDY@DESKTOP-QE5FBN1 MINGW64 ~/GymExercise (ft/squashing)
+$ git merge --squash ft/footer
+Updating 4400a62..6d32fb9
+Fast-forward
+Squash commit -- not updating HEAD
+ footer.html | 13 +++++++++++++
+ 1 file changed, 13 insertions(+)
+ create mode 100644 footer.html
+
+THEDDY@DESKTOP-QE5FBN1 MINGW64 ~/GymExercise (ft/squashing)
+$ git status
+On branch ft/squashing
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   footer.html
+
+
+THEDDY@DESKTOP-QE5FBN1 MINGW64 ~/GymExercise (ft/squashing)
+$ git commit -m "footer changes squashing"
+[ft/squashing 7632af9] footer changes squashing
+ 1 file changed, 13 insertions(+)
+ create mode 100644 footer.html
+
+THEDDY@DESKTOP-QE5FBN1 MINGW64 ~/GymExercise (ft/squashing)
+$ git push -u origin ft/squashing
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 489 bytes | 122.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/squashing' on GitHub by visiting:
+remote:      https://github.com/theddy23/Gym-Git-Exercise-Solutions/pull/new/ft/squashing
+remote:
+To https://github.com/theddy23/Gym-Git-Exercise-Solutions.git
+ * [new branch]      ft/squashing -> ft/squashing
+branch 'ft/squashing' set up to track 'origin/ft/squashing'.
+...
   
 
   
